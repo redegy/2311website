@@ -28,6 +28,15 @@
     <a-camera></a-camera>
   </a-entity>
 
+<a-entity id="rig">
+  <a-camera>
+    <a-cursor 
+      raycaster="objects: .clickable"
+      fuse="false">
+    </a-cursor>
+  </a-camera>
+</a-entity>
+  
   <!-- 📦 BANNER -->
   <a-entity 
     gltf-model="url(2311bannerstatic.glb)"  
@@ -36,34 +45,33 @@
   </a-entity>
 
   <!-- 🧭 MENU -->
-  <a-entity id="menu" position="-0.3 2 -3">
+<a-entity id="menu" position="-0.3 2 -3">
 
-    <!-- 🎮 GAMES → OPENS SUBWAY SURFERS -->
-    <a-text value="GAMES"
-      color="white"
-      width="4"
-      scale="1.4 1.4 1.4"
-      position="-1.5 0 0"
-      class="clickable"
-      onclick="openGames()"></a-text>
+  <a-text value="GAMES"
+    color="white"
+    width="4"
+    scale="1.4 1.4 1.4"
+    position="-1.5 0 0"
+    class="clickable"
+    onclick="openGames()"></a-text>
 
-    <a-text value="SHOP"
-      color="#white"
-      width="4"
-      scale="1.4 1.4 1.4"
-      position="0 0 0"
-      class="clickable"
-      onclick="showPage('shop')"></a-text>
+  <a-text value="SHOP"
+    color="white"
+    width="4"
+    scale="1.4 1.4 1.4"
+    position="0 0 0"
+    class="clickable"
+    onclick="openShop()"></a-text>
 
-    <a-text value="MAGIC"
-      color="white"
-      width="4"
-      scale="1.4 1.4 1.4"
-      position="1.5 0 0"
-      class="clickable"
-      onclick="showPage('magic')"></a-text>
+  <a-text value="MAGIC"
+    color="white"
+    width="4"
+    scale="1.4 1.4 1.4"
+    position="1.5 0 0"
+    class="clickable"
+    onclick="openMagic()"></a-text>
 
-  </a-entity>
+</a-entity>
 
   <!-- PAGES -->
   <a-entity id="gamesPage" visible="false">
@@ -95,6 +103,14 @@ function showPage(page) {
 /* 🎮 NEW: OPEN SUBWAY SURFERS */
 function openGames() {
   window.open("https://subway-surfers.gg/", "_blank");
+}
+
+function openShop() {
+  window.open("https://example.com/shop", "_blank");
+}
+
+function openMagic() {
+  window.open("https://example.com/magic", "_blank");
 }
 
 // 🌈 WORLD
