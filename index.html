@@ -119,7 +119,10 @@
     class="clickable"
     onclick="goRoom('menu')"></a-text>
 </a-entity>
-
+<a-entity cursor="rayOrigin: mouse"
+          raycaster="objects: .clickable"></a-entity>
+      <a-entity laser-controls="hand: right"></a-entity>
+<a-entity laser-controls="hand: left"></a-entity>
 </a-scene>
 
 <script>
